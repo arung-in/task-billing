@@ -13,3 +13,7 @@ Note:
 3. Make sure you entered the following commants before starting 
 `php artisan migrate`
 `php artisan db:seed`
+4. After site is up run this command on system command window (project folder)
+`php artisan queue:work` 
+or setup new task on wondows task scheduler with trigger at system startup and every minute for background run.
+And create a action to start a program `c:\xampp\php\php.exe` and arguments `c:\xampp\htdocs\task-billing\artisan queue:work --once` 
